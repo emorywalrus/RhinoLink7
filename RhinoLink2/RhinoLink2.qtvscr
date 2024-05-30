@@ -1,0 +1,429 @@
+<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" FontFamily="Segoe UI" FontSize="12">
+  <FlowDocument.Tag><![CDATA[{
+  "timestamp": "2024-05-22 22:16:28",
+  "files": {
+    "C:\\work\\my stuff\\RhinoLink6\\RhinoLink2\\RhinoLink2.vcxproj": {
+      "before": "7VlLb9tGEM65QP9BDwLhQvZBpB60LDUUA5tKXKGyYUh+9BCgWJEriwnJJXZJx0LS/95ZcpcPiY6kuEkbxz4Y0HJmdvjtzDezQ++XFy+MV/e+V7vDlLkkGCgttanUcGATxw1uB0oczRs95ZX580/GBSXvsB3VhniOYi+6RPQWR2ygnMSu5yg1sBLAr0UUhb9pGrMX2EdM9V2bEkbmkWoTX3PwHfZIiKnmsxlX09rNZkcB67WaMYqwf0pJHNbGaIa9gSI2tEgwd29jiiJwkKXCIF71tDYKbC928EAZ4ll8++nGDTptqQE6JVNmImNo5UXuCv8zLjwUzQn1zcSIoWW/UwlYSPGoUt/g3AR7GDG8wT0h9V84mKJ339Ufix2Y+CrIfc61rXHb0TlDyyI0DVgIAAjlaFkK2lOPzJCXh+m1JeLkOs0ws3WkNg1tbVlElRA+jV3H/DjsDU/6h53jxrHe6jb0w26v0T8anjT6Vks/0g+tw95J9+8sEBMdYSZNzjcU+fgDoe/l3ne62jO0Bx4K1T/wElQc8wwF6BY7ifuGJleF0ISQ6ByMsxDZ2Jws3ICM3eB929DKT4Q4pJBDPrB0Y5lI0qlWkwPyWRFuJnnPHG/BGX5IaFQTqA2Uvf1rSxDTBYoWB2/PMv6xwlAV1KWGcHJMqWlV5wj57LicagZKfW+/lN0Hn/b2pfcH9cGgXmCZuiJpq6QiE6hMPZfLEJvDZYCAHsfujCK6XEnzREKgd8VwslEq6WJmRjTGhra+LhSkj5eEeAxH5l1L7+RpKFeFsDWeTOOQwyjMFhakyAJRZEeYTsHYVeBCcYDtreIql6w8ITia/NBqu4BbYslvCu8cEvjp45uR/O7YTiMoxs+RK3qSNVqQkQsFZndsH0EL31PcjnZj7jJjp8qluvv6PsIBb2GBoyJoXUUFhqKdbJTIFmtGSXkKVIadlKu305C0Nl1gaIKVnYitVDUSn4A71/EAeqe8mg5dulrHCmVIjUFMFrQCveJ7l0VsH0rYznbqB1ktGxMbecdhOEQRklUlq5tbQfsYoGQeJR14PSulz1AFa5RTIPPniMpui2swyYhKmPlJASXzrMRrPPXPEL+BZ0lblhMdML/YQG/sBknjm5oocMmWfXAJVMuziB+6HhYo8xs1xTAE4GvO7xg5mJrgH28aV5fTtrNK4w03GNoLdVGhlzzMdG8QDaAOjPnIwUz+Qw9cWsxEwYOQEhszRmgOAzP/Gr4+uTp9+ev+AwIHiROVqqltaJJXYDD4NSmH5NhJ7xrIG+IQBw4MXqC/FxcT3lFn4untM/euWND+ldNbIdlVx6tO4/9+fjej80775Q9yipLanuw5nv8Y2SjP8cmx6Xd0fjm5Au1Znpgq59PlpALJklotMsGMxNTG6mKDXDY7yyXXJo3lwWOyoaiuuU/HjGF/5i1HwZyodhiWtl2T5m/AhfJStFaGv+BOk8asRTGKdizsX7CZJLqvvp3MyG++4XZwVjQZWfHOwyOf0RaDY3OkyTheiyAE81RqyyjbbGjkwzg594erwyBxe/0JnmMK/VHBxnTJoPWRJiAtHpRR+QV2K8E/fU/KbX4naKb5J7GKbVX1bYK4hTwP007ph2oz6BnflXIvsWN+xP3Dfk/HnUZLd5yG3rWbjX6r3W/YesduzvR2v9vH+cRfXmDkp6jMj+TBuvu7jVyi9ANfhkZhkCJH3dnQRczcqycoyVyY42T+Aw==",
+      "after": "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"
+    }
+  }
+}]]></FlowDocument.Tag>
+  <Section Margin="0,24" TextAlignment="Center">
+    <Paragraph FontSize="24" FontWeight="Bold" Margin="12,0">
+      <LineBreak />
+      <Span Foreground="Gray">Qt Visual Studio Tools</Span>
+    </Paragraph>
+    <Paragraph FontSize="42" Margin="12,0" FontWeight="Bold">
+      <Span TextDecorations="Underline">Project Format Conversion</Span>
+    </Paragraph>
+    <Paragraph Margin="12,8" FontSize="18">
+      <Span>Report generated on 2024-05-22 22:16:28</Span>
+    </Paragraph>
+  </Section>
+  <Section>
+    <Paragraph FontSize="32" FontWeight="Bold" Margin="12,0">
+      <Span>Files</Span>
+    </Paragraph>
+    <Paragraph Margin="24,12,0,0">
+      <Span FontFamily="Consolas" FontSize="14" Background="WhiteSmoke"><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+      <LineBreak />
+      <Hyperlink NavigateUri="file://C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj?before">[Before]</Hyperlink>
+      <Hyperlink NavigateUri="file://C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj?after">[After]</Hyperlink>
+      <Hyperlink NavigateUri="file://C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj?diff&amp;before&amp;after">
+                        [Diff before/after]
+                    </Hyperlink>
+      <Hyperlink NavigateUri="file://C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj?diff&amp;before&amp;current">
+                        [Diff before/current]
+                    </Hyperlink>
+      <Hyperlink NavigateUri="file://C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj?diff&amp;after&amp;current">
+                        [Diff after/current]
+                    </Hyperlink>
+      <LineBreak />
+    </Paragraph>
+  </Section>
+  <Section>
+    <Paragraph FontSize="32" FontWeight="Bold" Margin="12,0">
+      <Span>Changes</Span>
+    </Paragraph>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Enabling multi-processor compilation]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[      <MultiProcessorCompilation>true</MultiProcessorCompilation>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[      <MultiProcessorCompilation>true</MultiProcessorCompilation>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[      <MultiProcessorCompilation>true</MultiProcessorCompilation>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[      <MultiProcessorCompilation>true</MultiProcessorCompilation>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Project format version]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Keyword>QtVS_v304</Keyword>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Fallback for QTMSBUILD environment variable]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Default Qt properties]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Qt build settings]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Warn if Qt/MSBuild is not found]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  </Target>]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Qt property sheet]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Import Project="$(QtMsBuild)\Qt.props" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Import Project="$(QtMsBuild)\Qt.props" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Import Project="$(QtMsBuild)\Qt.props" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[    <Import Project="$(QtMsBuild)\Qt.props" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+    <Paragraph FontSize="20" FontWeight="Bold" Margin="12">
+      <Span><![CDATA[🡺 Qt targets]]></Span>
+    </Paragraph>
+    <Table CellSpacing="0" BorderBrush="Gray" BorderThickness="0.5">
+      <Table.Columns>
+        <TableColumn />
+        <TableColumn />
+      </Table.Columns>
+      <TableRowGroup>
+        <TableRow Background="Orange">
+          <TableCell ColumnSpan="2" BorderThickness="0.5" BorderBrush="Gray">
+            <Paragraph Margin="10,5" FontWeight="Bold">
+              <Span><![CDATA[C:\work\my stuff\RhinoLink6\RhinoLink2\RhinoLink2.vcxproj]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell ColumnSpan="2" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0.5" />
+        </TableRow>
+        <TableRow>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0" />
+          </TableCell>
+          <TableCell BorderThickness="0, 0, 0.5, 0" BorderBrush="Gray">
+            <Paragraph FontFamily="Consolas" Margin="4, 0">
+              <Span Background="LightGreen"><![CDATA[  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />]]></Span>
+            </Paragraph>
+          </TableCell>
+        </TableRow>
+      </TableRowGroup>
+    </Table>
+  </Section>
+  <Section>
+    <Paragraph />
+  </Section>
+</FlowDocument>
+<!--9Mk6pulj4G2U0gOTnPVpASSslR6OW0o5dgHZB7rdND8=-->
