@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Rhino.Display;
-using Rhino;
-using Rhino.Geometry;
 using Rhino.Runtime.InProcess;
-using Rhino.Runtime.InteropWrappers;
-using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+using System.Configuration;
+using System.Reflection;
+
+
 
 namespace RhinoCaller3
 {
@@ -46,16 +48,7 @@ namespace RhinoCaller3
         // creates and runs core. only works when ran in a new STA configured thread
         void run_core()
         {
-            core = new RhinoCore(null, WindowStyle.Normal, (IntPtr)window_handle);
-
-            // load layout. If none named embedded, make one by loading default and floating command window.
-            if (!Rhino.RhinoApp.RunScript("-WindowLayout Embedded", false))
-            {
-                Rhino.RhinoApp.RunScript("-WindowLayout Default", false);
-                Rhino.ApplicationSettings.AppearanceSettings.CommandPromptPosition = Rhino.ApplicationSettings.CommandPromptPosition.Floating;
-                Rhino.RhinoApp.RunScript("-SaveWindowLayout Embedded", false);
-                Rhino.RhinoApp.RunScript("-WindowLayout Embedded", false);
-            }
+            core = new RhinoCore(null, WindowStyle.NoWindow, (IntPtr)window_handle);
 
             lock_rhino_time(qtui_ptr, (void*)Rhino.RhinoApp.MainWindowHandle());
             
@@ -71,7 +64,7 @@ namespace RhinoCaller3
             Rhino.RhinoApp.Exit();
             ((Caller3*)caller)->rhino_thread.Join();
         }
-        public static string get_data()
+        public static string get_object_string()
         {
             List<Rhino.DocObjects.RhinoObject> object_list = Rhino.RhinoDoc.ActiveDoc.Objects.GetObjectList(Rhino.DocObjects.ObjectType.AnyObject).ToList();
             string ret = "";
@@ -80,6 +73,14 @@ namespace RhinoCaller3
                 ret += object_list[i].Geometry.GetType().ToString() + "\n";
             }
             return ret;
+        }
+        public static void save_settings_to_file()
+        {
+            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+        }
+        public static void load_settings_from_file()
+        {
+            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         }
     }
 }

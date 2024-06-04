@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
-    <height>689</height>
+    <width>817</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -27,24 +27,11 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="4" column="1" colspan="3">
      <layout class="QVBoxLayout" name="verticalLayout">
       <property name="sizeConstraint">
        <enum>QLayout::SetDefaultConstraint</enum>
       </property>
-      <item>
-       <widget class="QPushButton" name="testButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Run Rhino</string>
-        </property>
-       </widget>
-      </item>
       <item>
        <widget class="QTextBrowser" name="retBox">
         <property name="sizePolicy">
@@ -63,6 +50,39 @@
       </item>
      </layout>
     </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="testButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Run Rhino</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="saveButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Save Settings</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="loadButton">
+      <property name="text">
+       <string>Load Settings</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -70,7 +90,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>813</width>
+     <width>817</width>
      <height>21</height>
     </rect>
    </property>
