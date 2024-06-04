@@ -43,6 +43,8 @@ void QTUI::on_loadButton_clicked() {
 void QTUI::lock_rhino(void* rhino_handle) {
     // may well break if the layout is different
     HWND command_handle = GetWindowFromText(COMMAND_WINDOW);
+    HWND viewport_handle = GetWindowFromText(VIEWPORT_WINDOW);
+
 
     // start timer to always show info in below textbox
     timer = new QTimer(this);

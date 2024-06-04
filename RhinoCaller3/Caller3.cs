@@ -9,6 +9,9 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 using System.Configuration;
 using System.Reflection;
+using Rhino.Display;
+using Rhino;
+using System.Drawing;
 
 
 
@@ -48,7 +51,22 @@ namespace RhinoCaller3
         // creates and runs core. only works when ran in a new STA configured thread
         void run_core()
         {
-            core = new RhinoCore(null, WindowStyle.NoWindow, (IntPtr)window_handle);
+            core = new RhinoCore(null, WindowStyle.Normal, (IntPtr)window_handle);
+
+            RhinoApp.RunScript("-WindowLayout Default", false);
+
+            Rhino.ApplicationSettings.AppearanceSettings.CommandPromptPosition
+                = Rhino.ApplicationSettings.CommandPromptPosition.Floating;
+
+            string viewportName = "Embedded Viewport";
+            DefinedViewportProjection projection = DefinedViewportProjection.Perspective;
+            Rectangle locationAndSize = new Rectangle(0, 0, 500, 500);
+            bool floating = true;
+
+            RhinoDoc.ActiveDoc.Views.Add(viewportName, projection, locationAndSize, floating);
+
+            RhinoApp.RunScript("-SaveWindowLayout embedded", false);
+            RhinoApp.RunScript("-WindowLayout embedded", false);
 
             lock_rhino_time(qtui_ptr, (void*)Rhino.RhinoApp.MainWindowHandle());
             
