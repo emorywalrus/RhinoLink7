@@ -23,9 +23,9 @@ public:
 public slots:
     void on_testButton_clicked();
 
-    void on_saveButton_clicked();
+    void on_boxButton_clicked();
 
-    void on_loadButton_clicked();
+    void on_sphereButton_clicked();
 
     void lock_rhino(void* rhino_handle);
 

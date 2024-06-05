@@ -14,12 +14,9 @@ QTUI::QTUI(QWidget *parent)
     ui.setupUi(this);
 }
 
-__declspec(dllexport) void destroy_rhino(void*);
 QTUI::~QTUI()
 {
-    if (caller_ptr != nullptr) {
-        destroy_rhino(caller_ptr);
-    }
+    
 }
 
 // import from CLI
@@ -30,14 +27,13 @@ void QTUI::on_testButton_clicked() {
     caller_ptr = launch_rhino((void*)window_handle, (void*)this);
 }
 
-__declspec(dllexport) void save_settings_to_file();
-void QTUI::on_saveButton_clicked() {
-    save_settings_to_file();
+__declspec(dllexport) void run_script(std::string script);
+void QTUI::on_boxButton_clicked() {
+    run_script("_Box");
 }
 
-__declspec(dllexport) void load_settings_from_file();
-void QTUI::on_loadButton_clicked() {
-    load_settings_from_file();
+void QTUI::on_sphereButton_clicked() {
+    run_script("_Sphere");
 }
 
 void QTUI::lock_rhino(void* rhino_handle) {
@@ -45,6 +41,14 @@ void QTUI::lock_rhino(void* rhino_handle) {
     HWND command_handle = GetWindowFromText(COMMAND_WINDOW);
     HWND viewport_handle = GetWindowFromText(VIEWPORT_WINDOW);
 
+    QWidget* command_window = QWidget::createWindowContainer(QWindow::fromWinId((WId)command_handle));
+    command_window->setMaximumHeight(150);
+    ui.verticalLayout->insertWidget(0, command_window);
+    command_window->show();
+
+    QWidget* viewport_window = QWidget::createWindowContainer(QWindow::fromWinId((WId)viewport_handle));
+    ui.verticalLayout->insertWidget(0, viewport_window);
+    viewport_window->show();
 
     // start timer to always show info in below textbox
     timer = new QTimer(this);
@@ -52,26 +56,36 @@ void QTUI::lock_rhino(void* rhino_handle) {
     timer->start(500);
 }
 
-__declspec(dllexport) std::string get_data();
+string ret;
+string old_ret;
 
-string disp;
-string old_disp;
-
-void QTUI::update_text() {
-    //ui.retBox->setText(QString::fromStdString(get_object_string()));
-
+string get_window_name_string() {
     vector<HWND> handles = GetAllWindows();
-    disp = "";
+    ret = "";
     for (int i = 0; i < handles.size(); i++) {
         string newText = MyGetWindowText(handles[i]);
         if (newText != "") {
-            disp += newText + "\n";
+            ret += newText + "\n";
         }
     }
-    if (disp != old_disp) {
+    if (ret == old_ret) {
+        old_ret = ret;
+        return "unchanged";
+    }
+    else {
+        old_ret = ret;
+        return ret;
+    }
+}
+
+__declspec(dllexport) std::string get_data();
+
+void QTUI::update_text() {
+    //ui.retBox->setText(QString::fromStdString(get_object_string()));
+    string disp = get_window_name_string();
+    if (disp != "unchanged") {
         ui.retBox->setText(QString::fromStdString(disp));
     }
-    old_disp = disp;
 }
 
 extern "C" {

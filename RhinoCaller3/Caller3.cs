@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+
 using System.Threading;
+
 using Rhino.Runtime.InProcess;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Xml.Serialization;
-using System.Configuration;
-using System.Reflection;
 using Rhino.Display;
 using Rhino;
 using System.Drawing;
@@ -20,9 +17,19 @@ namespace RhinoCaller3
     unsafe
     public class Caller3
     {
+        ~Caller3 ()
+        {
+            Action command = () =>
+            {
+                Rhino.ApplicationSettings.AppearanceSettings.UpdateFromState(unembedded_settings);
+                Rhino.RhinoApp.Exit();
+            };
+            RhinoApp.InvokeOnUiThread(command);
+        }
         public RhinoCore core;
         public void* window_handle;
         public void* qtui_ptr;
+        public Rhino.ApplicationSettings.AppearanceSettingsState unembedded_settings;
 
         public Thread rhino_thread;
 
@@ -51,7 +58,7 @@ namespace RhinoCaller3
         // creates and runs core. only works when ran in a new STA configured thread
         void run_core()
         {
-            core = new RhinoCore(null, WindowStyle.Normal, (IntPtr)window_handle);
+            core = new RhinoCore(null, WindowStyle.Hidden, (IntPtr)window_handle);
 
             RhinoApp.RunScript("-WindowLayout Default", false);
 
@@ -60,27 +67,31 @@ namespace RhinoCaller3
 
             string viewportName = "Embedded Viewport";
             DefinedViewportProjection projection = DefinedViewportProjection.Perspective;
-            Rectangle locationAndSize = new Rectangle(0, 0, 500, 500);
+            Rectangle locationAndSize = new Rectangle(0, 0, 0, 0);
             bool floating = true;
-
             RhinoDoc.ActiveDoc.Views.Add(viewportName, projection, locationAndSize, floating);
+
+            unembedded_settings = Rhino.ApplicationSettings.AppearanceSettings.GetCurrentState();
+
+            Rhino.ApplicationSettings.AppearanceSettings.UpdateFromState(Rhino.ApplicationSettings.AppearanceSettings.GetDefaultState());
+
+            Rhino.ApplicationSettings.AppearanceSettings.CommandPromptBackgroundColor = Color.White;
+            Rhino.ApplicationSettings.AppearanceSettings.CommandPromptTextColor = Color.Black;
+            Rhino.ApplicationSettings.AppearanceSettings.ViewportBackgroundColor = Color.White;
+            Rhino.ApplicationSettings.AppearanceSettings.GridThickLineColor = Color.LightGray;
+            Rhino.ApplicationSettings.AppearanceSettings.GridThinLineColor = Color.White;
+            Rhino.ApplicationSettings.AppearanceSettings.GridXAxisLineColor = Color.LightGray;
+            Rhino.ApplicationSettings.AppearanceSettings.GridYAxisLineColor = Color.LightGray;
+            Rhino.ApplicationSettings.AppearanceSettings.GridZAxisLineColor = Color.Empty;
+            Rhino.ApplicationSettings.AppearanceSettings.FrameBackgroundColor = Color.White;
 
             RhinoApp.RunScript("-SaveWindowLayout embedded", false);
             RhinoApp.RunScript("-WindowLayout embedded", false);
 
             lock_rhino_time(qtui_ptr, (void*)Rhino.RhinoApp.MainWindowHandle());
-            
+
             core.Run();
             core.Dispose();
-        }
-        public void Dispose()
-        {
-            core.Dispose();
-        }
-        public static void destroy_rhino(void* caller)
-        {
-            Rhino.RhinoApp.Exit();
-            ((Caller3*)caller)->rhino_thread.Join();
         }
         public static string get_object_string()
         {
@@ -92,13 +103,13 @@ namespace RhinoCaller3
             }
             return ret;
         }
-        public static void save_settings_to_file()
+        public static void run_script(string script)
         {
-            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        }
-        public static void load_settings_from_file()
-        {
-            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            Action command = () =>
+            {
+                RhinoApp.RunScript(script, false);
+            };
+            RhinoApp.InvokeOnUiThread(command);
         }
     }
 }
