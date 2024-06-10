@@ -20,6 +20,8 @@ public:
 
     QTimer* timer;
 
+    void closeEvent(QCloseEvent* event) override;
+
 public slots:
     void on_testButton_clicked();
 

@@ -19,12 +19,7 @@ namespace RhinoCaller3
     {
         ~Caller3 ()
         {
-            Action command = () =>
-            {
-                Rhino.ApplicationSettings.AppearanceSettings.UpdateFromState(unembedded_settings);
-                Rhino.RhinoApp.Exit();
-            };
-            RhinoApp.InvokeOnUiThread(command);
+            Rhino.ApplicationSettings.AppearanceSettings.UpdateFromState(unembedded_settings);
         }
         public RhinoCore core;
         public void* window_handle;
@@ -91,7 +86,6 @@ namespace RhinoCaller3
             lock_rhino_time(qtui_ptr, (void*)Rhino.RhinoApp.MainWindowHandle());
 
             core.Run();
-            core.Dispose();
         }
         public static string get_object_string()
         {
@@ -110,6 +104,11 @@ namespace RhinoCaller3
                 RhinoApp.RunScript(script, false);
             };
             RhinoApp.InvokeOnUiThread(command);
+        }
+
+        public static void exit_rhino(void* caller_ptr)
+        {
+            RhinoApp.Exit();
         }
     }
 }

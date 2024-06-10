@@ -3,6 +3,7 @@
 #include <iostream>
 
 __declspec(dllexport) void initialize_rhino();
+__declspec(dllexport) void exit_rhino(void* caller_ptr);
 
 int main(int argc, char *argv[])
 {

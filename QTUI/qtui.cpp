@@ -14,9 +14,10 @@ QTUI::QTUI(QWidget *parent)
     ui.setupUi(this);
 }
 
+
 QTUI::~QTUI()
 {
-    
+
 }
 
 // import from CLI
@@ -92,4 +93,13 @@ extern "C" {
     __declspec(dllexport) void lock_rhino_time(void* qtui, void* rhino_handle) {
         QMetaObject::invokeMethod((QTUI*)qtui, "lock_rhino", Qt::QueuedConnection, Q_ARG(void*, rhino_handle));
     }
+}
+
+
+__declspec(dllexport) void exit_rhino(void* caller_ptr);
+void QTUI::closeEvent(QCloseEvent* event) {
+    if (this->caller_ptr) {
+        exit_rhino(this->caller_ptr);
+    }
+    event->accept();
 }

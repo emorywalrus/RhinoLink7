@@ -22,3 +22,7 @@ __declspec(dllexport) std::string get_object_string() {
 __declspec(dllexport) void run_script(std::string script) {
 	Caller3::run_script(marshal_as<System::String^>(script));
 }
+
+__declspec(dllexport) void exit_rhino(void* caller_ptr) {
+	Caller3::exit_rhino(caller_ptr);
+}
