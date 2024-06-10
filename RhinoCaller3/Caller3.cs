@@ -82,23 +82,10 @@ namespace RhinoCaller3
             Rhino.RhinoApp.Exit();
             ((Caller3*)caller)->rhino_thread.Join();
         }
-        public static string get_object_string()
+        public static string get_data()
         {
-            List<Rhino.DocObjects.RhinoObject> object_list = Rhino.RhinoDoc.ActiveDoc.Objects.GetObjectList(Rhino.DocObjects.ObjectType.AnyObject).ToList();
-            string ret = "";
-            for (int i = 0; i < object_list.Count; i++)
-            {
-                ret += object_list[i].Geometry.GetType().ToString() + "\n";
-            }
-            return ret;
-        }
-        public static void save_settings_to_file()
-        {
-            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        }
-        public static void load_settings_from_file()
-        {
-            string root_path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            return Rhino.ApplicationSettings.FileSettings.GetDataFolder(true);
         }
     }
 }
+

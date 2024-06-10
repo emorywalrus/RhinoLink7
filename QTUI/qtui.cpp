@@ -30,14 +30,14 @@ void QTUI::on_testButton_clicked() {
     caller_ptr = launch_rhino((void*)window_handle, (void*)this);
 }
 
-__declspec(dllexport) void save_settings_to_file();
-void QTUI::on_saveButton_clicked() {
-    save_settings_to_file();
+
+void QTUI::on_Button1_clicked() {
+
 }
 
-__declspec(dllexport) void load_settings_from_file();
-void QTUI::on_loadButton_clicked() {
-    load_settings_from_file();
+
+void QTUI::on_Button2_clicked() {
+
 }
 
 void QTUI::lock_rhino(void* rhino_handle) {
@@ -54,24 +54,8 @@ void QTUI::lock_rhino(void* rhino_handle) {
 
 __declspec(dllexport) std::string get_data();
 
-string disp;
-string old_disp;
-
 void QTUI::update_text() {
-    //ui.retBox->setText(QString::fromStdString(get_object_string()));
-
-    vector<HWND> handles = GetAllWindows();
-    disp = "";
-    for (int i = 0; i < handles.size(); i++) {
-        string newText = MyGetWindowText(handles[i]);
-        if (newText != "") {
-            disp += newText + "\n";
-        }
-    }
-    if (disp != old_disp) {
-        ui.retBox->setText(QString::fromStdString(disp));
-    }
-    old_disp = disp;
+    ui.retBox->setText(QString::fromStdString(get_data()));
 }
 
 extern "C" {

@@ -19,14 +19,7 @@ __declspec(dllexport) void destroy_rhino(void* caller) {
 	Caller3::destroy_rhino(caller);
 }
 
-__declspec(dllexport) std::string get_object_string() {
-	return marshal_as<std::string>(Caller3::get_object_string());
+__declspec(dllexport) std::string get_data() {
+	return marshal_as<std::string>(Caller3::get_data());
 }
 
-__declspec(dllexport) void save_settings_to_file() {
-	Caller3::save_settings_to_file();
-}
-
-__declspec(dllexport) void load_settings_from_file() {
-	Caller3::load_settings_from_file();
-}
