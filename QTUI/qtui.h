@@ -16,14 +16,12 @@ public:
 
     Ui::QTUIClass ui;
 
-    void* caller_ptr = nullptr;
-
     QTimer* timer;
 
 public slots:
-    void on_testButton_clicked();
+    void on_runButton_clicked();
 
-    void on_Button1_clicked();
+    void on_closeButton_clicked();
 
     void on_Button2_clicked();
 

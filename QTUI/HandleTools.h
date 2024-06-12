@@ -4,6 +4,7 @@
 #include <string>
 
 #define RHINO_WINDOW "Untitled - Rhino 8 Not For Resale Lab"
+#define EMBED_RHINO_WINDOW "EmbedScheme - Rhino 8 Not For Resale Lab"
 #define COMMAND_WINDOW "UNMANAGED TabPanelDockBarFloatingForm -> Command"
 #define VIEWPORT_WINDOW "Rhino Viewport"
 
