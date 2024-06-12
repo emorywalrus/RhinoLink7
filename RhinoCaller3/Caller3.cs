@@ -53,11 +53,13 @@ namespace RhinoCaller3
             lock_rhino_time(qtui_ptr, (void*)RhinoApp.MainWindowHandle());
 
             core.Run();
+            core.Dispose();
         }
 
         public static void destroy_rhino()
         {
             RhinoApp.Exit();
+            Caller3.rhino_thread.Join();
         }
 
         public static string get_data()
