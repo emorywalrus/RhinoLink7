@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Rhino.Runtime.InProcess;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Xml.Serialization;
-using System.Configuration;
-using System.Reflection;
-using Rhino.Display;
 using Rhino;
-using System.Drawing;
 
 
 
@@ -23,7 +15,6 @@ namespace RhinoCaller3
         public static RhinoCore core;
         public static void* window_handle;
         public static void* qtui_ptr;
-
         public static Thread rhino_thread;
 
         public static void initialize_rhino()
@@ -32,15 +23,15 @@ namespace RhinoCaller3
         }
         // static funtion to be ran from the linker
         // saves handle in caller class, which is then used to make the core.
-        public static void launch_rhino(void* handle, void* qtui_ptr)
+        public static void launch_rhino(void* in_window_handle, void* in_qtui_ptr)
         {
-            Caller3.window_handle = handle;
-            Caller3.qtui_ptr = qtui_ptr;
+            window_handle = in_window_handle;
+            qtui_ptr = in_qtui_ptr;
 
-            Caller3.rhino_thread = new Thread(Caller3.run_core);
-            Caller3.rhino_thread.IsBackground = true;
-            Caller3.rhino_thread.SetApartmentState(ApartmentState.STA);
-            Caller3.rhino_thread.Start();
+            rhino_thread = new Thread(run_core);
+            rhino_thread.IsBackground = true;
+            rhino_thread.SetApartmentState(ApartmentState.STA);
+            rhino_thread.Start();
         }
         
         [DllImport("QTUI.exe")]
@@ -48,28 +39,53 @@ namespace RhinoCaller3
         // creates and runs core. only works when ran in a new STA configured thread
         static void run_core()
         {
-            core = new RhinoCore(new string[] { "/nosplash", "/Scheme=EmbedScheme" }, WindowStyle.Hidden, (IntPtr)window_handle);
+            copy_settings();
+
+            string[] args = new string[] { "/nosplash", "/Scheme=EmbedScheme" };
+            core = new RhinoCore(args, WindowStyle.Hidden, (IntPtr)window_handle);
 
             lock_rhino_time(qtui_ptr, (void*)RhinoApp.MainWindowHandle());
 
             core.Run();
-            core.Dispose();
         }
 
         public static void destroy_rhino()
         {
+            Action a = () =>
+            {
+                core.Dispose();
+                core = null;
+            };
             RhinoApp.Exit();
-            Caller3.rhino_thread.Join();
+            if (core != null)
+            {
+                RhinoApp.InvokeOnUiThread(a);
+            }
         }
 
         public static string get_data()
         {
-            return root_folder();
+            return Path.Combine(Rhino.ApplicationSettings.FileSettings.GetDataFolder(true), "settings");
         }
-
-        public static string root_folder()
+        static void copy_settings()
         {
-            return Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string asm_loc = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string root_folder = Path.GetDirectoryName(asm_loc);
+
+            string settings_source = Path.Combine(
+                root_folder,
+                "settings"
+                );
+
+            string settings_target = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "McNeel",
+                "Rhinoceros",
+                "8.0",
+                "settings"
+                );
+
+            new Microsoft.VisualBasic.Devices.Computer().FileSystem.CopyDirectory(settings_source, settings_target, true);
         }
     }
 }

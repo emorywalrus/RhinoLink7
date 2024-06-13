@@ -65,6 +65,7 @@
     <RegisterForComInterop>true</RegisterForComInterop>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -85,7 +86,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EmbedOptions.ini">
+    <Content Include="settings\Scheme__EmbedScheme\containers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings\settings-Scheme__EmbedScheme.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings\window_positions-Scheme__EmbedScheme.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

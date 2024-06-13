@@ -23,7 +23,7 @@ public slots:
 
     void on_closeButton_clicked();
 
-    void on_Button2_clicked();
+    void on_installButton_clicked();
 
     void lock_rhino(void* rhino_handle);
 

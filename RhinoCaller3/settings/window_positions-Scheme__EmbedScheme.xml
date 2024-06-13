@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings id="2.0">
+  <settings>
+    <child key="DialogPositions">
+      <child key="868c63f5-3760-4a45-8600-5399cc57b47c_11013_Rhino Options">
+        <entry key="rectangle">241,291,821,684</entry>
+        <entry key="Font name">Segoe UI</entry>
+        <entry key="Font height">-12</entry>
+      </child>
+    </child>
+    <child key="MainFrame">
+      <entry key="NormalPosition">860,217,1153,1007</entry>
+    </child>
+    <child key="Docking Windows">
+      <entry key="DockingLocationLocked">False</entry>
+    </child>
+  </settings>
+</settings>

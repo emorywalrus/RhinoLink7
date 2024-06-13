@@ -5,6 +5,7 @@
 #include <vector>
 #include "HandleTools.h"
 #include "qsizepolicy.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -17,9 +18,11 @@ QTUI::QTUI(QWidget *parent)
     this->on_runButton_clicked();
 }
 
+__declspec(dllexport) void destroy_rhino();
+
 QTUI::~QTUI()
 {
-
+    destroy_rhino();
 }
 
 // import from CLI
@@ -30,14 +33,19 @@ void QTUI::on_runButton_clicked() {
     launch_rhino((void*)window_handle, (void*)this);
 }
 
-__declspec(dllexport) void destroy_rhino();
-
 void QTUI::on_closeButton_clicked() {
     destroy_rhino();
 }
 
-void QTUI::on_Button2_clicked() {
+void QTUI::on_installButton_clicked() {
+    char buffer[1024];
+    GetModuleFileNameA(NULL, buffer, 1024);
+    string::size_type len = string(buffer).find_last_of("\\/");
+    string folder = string(buffer).substr(0, len);
 
+    const char* rhino_installer = folder.append("\\rhino_en-us_8.2.23346.13001.exe").c_str();
+
+    system(rhino_installer);
 }
 
 void QTUI::lock_rhino(void* rhino_handle) {
@@ -45,7 +53,7 @@ void QTUI::lock_rhino(void* rhino_handle) {
     HWND command_handle = GetWindowFromText(COMMAND_WINDOW);
 
     QWidget* command_window = QWidget::createWindowContainer(QWindow::fromWinId((WId)command_handle));
-    command_window->setMaximumHeight(150);
+    command_window->setMaximumHeight(100);
     ui.verticalLayout->insertWidget(0, command_window);
     command_window->show();
 

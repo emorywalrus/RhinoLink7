@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings id="2.0">
+  <settings>
+    <entry key="country">0</entry>
+    <child key="Private">
+      <entry key="SettingsInitialized">True</entry>
+    </child>
+    <child key="Options">
+      <child key="Advanced">
+        <entry key="DarkMode">False</entry>
+      </child>
+      <child key="Appearance">
+        <entry key="ViewportBackgroundColor">255,255,255,255</entry>
+        <entry key="CommandPromptTextColor">255,0,0,0</entry>
+        <entry key="CommandPromptBackgroundColor">255,255,255,255</entry>
+      </child>
+      <child key="Grid">
+        <entry key="ThinLineColor">255,230,230,230</entry>
+        <entry key="ThickLineColor">255,230,230,230</entry>
+      </child>
+      <child key="OpenGL">
+        <entry key="MajorVersion">2</entry>
+      </child>
+      <child key="UiPaintColors">
+        <entry key="NormalStart">255,216,217,221</entry>
+        <entry key="NormalEnd">255,233,235,239</entry>
+        <entry key="NormalBorder">255,192,200,217</entry>
+        <entry key="MouseOverControlStart">255,250,250,250</entry>
+        <entry key="MouseOverControlEnd">255,179,219,255</entry>
+        <entry key="MouseOverControlBorder">255,250,250,250</entry>
+        <entry key="HotStart">255,234,236,240</entry>
+        <entry key="HotEnd">255,234,236,240</entry>
+        <entry key="PressedStart">255,250,250,250</entry>
+        <entry key="PressedEnd">255,108,187,255</entry>
+        <entry key="TextEnabled">255,46,47,48</entry>
+        <entry key="TextDisabled">255,109,109,109</entry>
+        <entry key="ActiveViewportTitle">255,107,163,255</entry>
+        <entry key="InactiveViewportTitle">255,220,222,226</entry>
+        <entry key="ActiveCaption">255,255,255,255</entry>
+        <entry key="InactiveCaption">255,220,222,226</entry>
+        <entry key="InactiveTabBackground">255,216,217,221</entry>
+      </child>
+      <child key="SelectionFilter">
+        <entry key="GlobalGeometryFilter">-1</entry>
+      </child>
+      <child key="DisplayAttributesManager" hidden="True">
+        <child key="8bc8debe-c83b-4c47-b13c-9db074510cac">
+          <child key="Lighting">
+            <entry key="Light1ID">8be0fe5e-16dd-4f79-bd3c-53db4efd8647</entry>
+            <entry key="Light2ID">fbee85a9-ddf5-4732-8589-b8a358f226ce</entry>
+            <entry key="Light3ID">f73a6ec5-6fdf-4f22-b2b4-832bb4d64d9d</entry>
+          </child>
+        </child>
+        <child key="ff608b97-81d3-4186-831c-41f7dc140881">
+          <child key="Lighting">
+            <entry key="Light1ID">ca4ef8ee-f896-4026-8ef5-2362f0658cfd</entry>
+            <entry key="Light2ID">b6ed9422-74ea-4598-842f-d98802ca1bab</entry>
+            <entry key="Light3ID">afc2f8e3-23e5-4fff-a87a-c2b51933b9cb</entry>
+          </child>
+        </child>
+        <child key="b5c19d5d-0aec-4ff7-a10e-e052e660263a">
+          <child key="Lighting">
+            <entry key="Light1ID">794fd39e-d911-4c8e-a19d-8de0ceede24d</entry>
+            <entry key="Light2ID">57aedccd-d31c-489d-8925-1d36618c3c9d</entry>
+            <entry key="Light3ID">09a1d8d6-acdb-4d7e-8978-0159940be3b3</entry>
+          </child>
+        </child>
+      </child>
+      <child key="TabPanels">
+        <entry key="LastRestoredWindowLayout">Rhino.UI.Resources.rui.default_win.rhw</entry>
+      </child>
+    </child>
+    <child key="UI">
+      <child key="Settings">
+        <entry key="ColorPanelSwatches">
+          <list>
+            <value>#E6E6E6</value>
+            <value>#FFFFFF</value>
+          </list>
+        </entry>
+      </child>
+    </child>
+    <child key="LayersPanel" hidden="True">
+      <entry key="ColumnSorting">True</entry>
+      <child key="LayerColumnGroup.Model" hidden="True">
+        <entry key="Order">
+          <list>
+            <value>0</value>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+            <value>13</value>
+            <value>14</value>
+          </list>
+        </entry>
+        <entry key="Width">
+          <list>
+            <value>80</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>80</value>
+            <value>80</value>
+            <value>16</value>
+            <value>80</value>
+            <value>80</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>80</value>
+          </list>
+        </entry>
+        <entry key="Visible">
+          <list>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+          </list>
+        </entry>
+      </child>
+      <child key="LayerColumnGroup.Viewport" hidden="True">
+        <entry key="Order">
+          <list>
+            <value>0</value>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+            <value>13</value>
+            <value>14</value>
+          </list>
+        </entry>
+        <entry key="Width">
+          <list>
+            <value>80</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>80</value>
+            <value>80</value>
+            <value>16</value>
+            <value>80</value>
+            <value>80</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>16</value>
+            <value>80</value>
+          </list>
+        </entry>
+        <entry key="Visible">
+          <list>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+          </list>
+        </entry>
+      </child>
+    </child>
+    <child key="Command Use Counts" hidden="True">
+      <entry key="Options">1</entry>
+    </child>
+    <child key="Startup">
+      <entry key="ForceContextControlBarVisible">False</entry>
+    </child>
+  </settings>
+  <command name="ViewSections">
+    <entry key="Clip">True</entry>
+    <entry key="SetView">False</entry>
+    <entry key="SetPlane">False</entry>
+    <entry key="Display">False</entry>
+  </command>
+  <command name="ExtractClippingSections">
+    <entry key="AddCrvs">True</entry>
+    <entry key="AddHatch">False</entry>
+    <entry key="Group">True</entry>
+  </command>
+  <command name="ExtractClippingSlices">
+    <entry key="SliceLocation">1</entry>
+    <entry key="SliceThickness">0</entry>
+    <entry key="UsClippingPlaneDepth">False</entry>
+    <entry key="Group">True</entry>
+  </command>
+  <command name="TestExtractClippingPlaneSection">
+    <entry key="FillType">0</entry>
+    <entry key="Group">False</entry>
+    <entry key="ExtractPattern">True</entry>
+  </command>
+  <command name="ExtrudeCrvTapered">
+    <entry key="SplitAtTangents">False</entry>
+  </command>
+  <command name="TestSetDebugWriteObjectDirectory">
+    <entry key="DebugOutputDirectory">C:\Users\erussell\OneDrive - Itasca Consulting\Desktop</entry>
+  </command>
+  <command name="Heightfield">
+    <entry key="BitmapType" />
+  </command>
+  <command name="TestPictureFrame">
+    <entry key="BitmapDir" />
+  </command>
+  <command name="Layout">
+    <entry key="printer_name" />
+  </command>
+  <command name="TestOldTextObject">
+    <entry key="AlongCurve">False</entry>
+    <entry key="FlipOrientationAlongCurve">False</entry>
+    <entry key="ModeAlongCurve">0</entry>
+    <entry key="Placement">0</entry>
+  </command>
+  <command name="TestFileSnapShot">
+    <entry key="OptionalString1" />
+    <entry key="OptionalString2" />
+  </command>
+  <command name="TestUntrimAll">
+    <entry key="UnTrim_KeepTrimObjects">0</entry>
+  </command>
+</settings>
