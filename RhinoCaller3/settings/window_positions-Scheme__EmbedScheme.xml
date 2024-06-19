@@ -9,10 +9,7 @@
       </child>
     </child>
     <child key="MainFrame">
-      <entry key="NormalPosition">860,217,1153,1007</entry>
-    </child>
-    <child key="Docking Windows">
-      <entry key="DockingLocationLocked">False</entry>
+      <entry key="NormalPosition">256,93,1153,1007</entry>
     </child>
   </settings>
 </settings>

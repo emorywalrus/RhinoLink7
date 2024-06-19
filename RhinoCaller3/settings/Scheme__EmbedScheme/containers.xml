@@ -44,7 +44,7 @@
       </tabs>
     </dock_bar>
     <dock_bar guid="1d3d1785-2332-428b-a838-b2fe39ec50f4" unmanaged="True" text="Command" dock_style="TopAndBottom">
-      <placement dock_style="TopAndBottom" dock_location="Floating" recent_dock_location="Top" dock_band_size="200,55" dock_band_item_size="1,-1" docked_placement="0,0" float_point="385,809" float_size="602,95" visible="True" />
+      <placement dock_style="TopAndBottom" dock_location="Top" recent_dock_location="Top" dock_band_size="200,55" dock_band_item_size="1,-1" docked_placement="0,0" float_point="572,145" float_size="602,95" visible="True" />
     </dock_bar>
     <dock_bar guid="26b86ed9-12ff-4198-b49e-83bd3dfa7480" source_group_file="c7da84fc-2991-4824-832a-4f2509bd0ede" source_group="12428ca8-b9f4-4954-8f6e-8a139226b383">
       <placement dock_location="Floating" recent_dock_location="Left" float_point="-1431655808,0" float_size="266,255" />
@@ -335,7 +335,11 @@
         <dock_bar guid="5a5b89a0-830f-c90d-5f60-35c2e907e18c" />
       </band>
     </dock_site>
-    <dock_site location="Top" auto_hide="False" />
+    <dock_site location="Top" auto_hide="False">
+      <band size="55">
+        <dock_bar guid="1d3d1785-2332-428b-a838-b2fe39ec50f4" />
+      </band>
+    </dock_site>
     <dock_site location="Bottom" auto_hide="False">
       <band size="44">
         <dock_bar guid="b1c225e5-68ba-44a9-8402-f70a6eb49937" />

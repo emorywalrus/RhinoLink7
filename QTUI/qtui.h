@@ -6,10 +6,12 @@
 #include <QtGui>
 #include <QEvent>
 
+using namespace std;
+
+__declspec(dllexport) std::string get_history();
 class QTUI : public QMainWindow
 {
     Q_OBJECT
-
 public:
     QTUI(QWidget *parent = nullptr);
     ~QTUI();
@@ -19,14 +21,8 @@ public:
     QTimer* timer;
 
 public slots:
-    void on_runButton_clicked();
-
-    void on_closeButton_clicked();
-
-    void on_installButton_clicked();
-
     void lock_rhino(void* rhino_handle);
 
-    void update_text();
+    void write_to_cmd_line_slot();
 };
 

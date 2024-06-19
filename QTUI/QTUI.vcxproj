@@ -47,7 +47,7 @@
     <QtInstall>6.6.3_msvc2019_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtDeployCopyFiles>true</QtDeployCopyFiles>
-    <QtDeploy>true</QtDeploy>
+    <QtDeploy>false</QtDeploy>
     <QtToolsDesignTime>false</QtToolsDesignTime>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
