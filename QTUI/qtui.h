@@ -8,7 +8,7 @@
 
 using namespace std;
 
-__declspec(dllexport) std::string get_history();
+
 class QTUI : public QMainWindow
 {
     Q_OBJECT
@@ -18,11 +18,25 @@ public:
 
     Ui::QTUIClass ui;
 
-    QTimer* timer;
+    QTimer* timer = new QTimer(this);
+
+    QWidget* rhino_window;
+protected:
+    void closeEvent(QCloseEvent* event) override;
 
 public slots:
     void lock_rhino(void* rhino_handle);
 
     void write_to_cmd_line_slot();
+
+    void on_boxButton_clicked();
+
+    void on_sphereButton_clicked();
+
+    void on_addButton_clicked();
+
+    void on_subtractButton_clicked();
+
+    void update();
 };
 

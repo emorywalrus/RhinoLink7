@@ -6,12 +6,12 @@
 #include "HandleTools.h"
 #include "qsizepolicy.h"
 #include <cstdlib>
+#include <qscrollbar.h>
 
 using namespace std;
 
 // import from CLI
 __declspec(dllexport) void launch_rhino(void* window_handle, void* ui_ptr);
-
 
 QTUI::QTUI(QWidget *parent)
     : QMainWindow(parent)
@@ -22,14 +22,22 @@ QTUI::QTUI(QWidget *parent)
     launch_rhino(reinterpret_cast<void*>(QTUI::window()->winId()), this);
 
     connect(ui.lineEdit, &QLineEdit::returnPressed, this, &QTUI::write_to_cmd_line_slot);
+    connect(timer, &QTimer::timeout, this, &QTUI::update);
 }
+
+
+
+
 
 // lock rhino to window, export so C# can call it, invoke slot from C# thread
 void QTUI::lock_rhino(void* rhino_handle) {
     // may well break if the layout is different
-    QWidget* rhino_window = QWidget::createWindowContainer(QWindow::fromWinId(reinterpret_cast<WId>(rhino_handle)));
-    ui.verticalLayout->insertWidget(0, rhino_window);
-    rhino_window->show();
+    this->rhino_window = QWidget::createWindowContainer(QWindow::fromWinId(reinterpret_cast<WId>(rhino_handle)));
+    this->rhino_window->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    this->rhino_window->setFocusPolicy(Qt::FocusPolicy::NoFocus);
+    ui.rhinoLayout->addWidget(rhino_window);
+    this->rhino_window->show();
+    timer->start(100);
 }
 // invokes lock rhino slot. connection is queued, so this can be invoked from whatever thread.
 extern "C" {
@@ -41,14 +49,61 @@ extern "C" {
 __declspec(dllexport) void destroy_rhino();
 QTUI::~QTUI()
 {
-    destroy_rhino();
+
 }
 
-__declspec(dllexport) void write_to_cmd_line(std::string line);
+__declspec(dllexport) void run_command(std::string);
 __declspec(dllexport) std::string get_history();
+__declspec(dllexport) std::string get_prompt();
+
+
+string old_prompt = "";
+string prompt = "";
+
+void QTUI::update() {
+    int old_pos = ui.textBrowser->verticalScrollBar()->value();
+    int old_max = ui.textBrowser->verticalScrollBar()->maximum();
+
+    ui.textBrowser->setText(QString::fromStdString(get_history()));
+
+    if (old_pos == old_max) {
+        int new_max = ui.textBrowser->verticalScrollBar()->maximum();
+        ui.textBrowser->verticalScrollBar()->setValue(new_max);
+    }
+    else {
+        ui.textBrowser->verticalScrollBar()->setValue(old_pos);
+    }
+
+    prompt = get_prompt() + ": ";
+    if (prompt != old_prompt) {
+        ui.lineEdit->setText(QString::fromStdString(prompt));
+        old_prompt = prompt;
+    }
+
+    SetFocus((HWND)QTUI::winId());
+}
+
 void QTUI::write_to_cmd_line_slot() {
-    write_to_cmd_line(ui.lineEdit->text().toStdString());
-    ui.lineEdit->clear();
-    ui.retBox->setText(QString::fromStdString(get_history()));
-    SetFocus(reinterpret_cast<HWND>(ui.lineEdit->winId()));
+    run_command(ui.lineEdit->text().toStdString().substr(prompt.length()));
+}
+
+void QTUI::on_boxButton_clicked() {
+    run_command("Box");
+}
+
+void QTUI::on_sphereButton_clicked() {
+    run_command("Sphere");
+}
+
+void QTUI::on_addButton_clicked() {
+    run_command("BooleanUnion");
+}
+
+void QTUI::on_subtractButton_clicked() {
+    run_command("BooleanDifference");
+}
+
+void QTUI::closeEvent(QCloseEvent* event) {
+    destroy_rhino();
+    event->accept();
 }

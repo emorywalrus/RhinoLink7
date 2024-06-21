@@ -69,6 +69,21 @@
       <child key="TabPanels">
         <entry key="LastRestoredWindowLayout">Rhino.UI.Resources.rui.default_win.rhw</entry>
       </child>
+      <child key="EmapAnalysis">
+        <entry key="EmapFileNameCount">12</entry>
+        <entry key="EmapFileName_00">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\truesphere.jpg</entry>
+        <entry key="EmapFileName_01">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\Sunset.jpg</entry>
+        <entry key="EmapFileName_02">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\sunset 2.png</entry>
+        <entry key="EmapFileName_03">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\sunroom 2.png</entry>
+        <entry key="EmapFileName_04">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\sunroom 1.png</entry>
+        <entry key="EmapFileName_05">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\space needle.png</entry>
+        <entry key="EmapFileName_06">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\polished_silver.jpg</entry>
+        <entry key="EmapFileName_07">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\polished_gold.jpg</entry>
+        <entry key="EmapFileName_08">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\fluorescent_tube.bmp</entry>
+        <entry key="EmapFileName_09">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\brushed_silver.jpg</entry>
+        <entry key="EmapFileName_10">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\brushed_gold.jpg</entry>
+        <entry key="EmapFileName_11">C:\Users\erussell\AppData\Roaming\McNeel\Rhinoceros\8.0\Localization\en-US\Environment Maps\arches.png</entry>
+      </child>
     </child>
     <child key="UI">
       <child key="Settings">
@@ -202,7 +217,7 @@
       </child>
     </child>
     <child key="Command Use Counts" hidden="True">
-      <entry key="Options">1</entry>
+      <entry key="Options">2</entry>
     </child>
     <child key="Startup">
       <entry key="ForceContextControlBarVisible">False</entry>
@@ -257,5 +272,8 @@
   </command>
   <command name="TestUntrimAll">
     <entry key="UnTrim_KeepTrimObjects">0</entry>
+  </command>
+  <command name="Sphere">
+    <entry key="DefaultRadius">14.730334895244013</entry>
   </command>
 </settings>

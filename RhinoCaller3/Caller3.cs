@@ -42,9 +42,8 @@ namespace RhinoCaller3
         {
             copy_settings();
 
-            string[] args = new string[] { "/nosplash", "/Scheme=EmbedScheme" };
+            string[] args = new string[] { "/nosplash", "/notemplate", "/Scheme=EmbedScheme" };
             core = new RhinoCore(args, WindowStyle.Hidden, (IntPtr)window_handle);
-
             lock_rhino_time(qtui_ptr, (void*)RhinoApp.MainWindowHandle());
 
             core.Run();
@@ -52,16 +51,12 @@ namespace RhinoCaller3
 
         public static void destroy_rhino()
         {
-            Action a = () =>
+            Action dispose = () =>
             {
                 core.Dispose();
                 core = null;
             };
-            RhinoApp.Exit();
-            if (core != null)
-            {
-                RhinoApp.InvokeOnUiThread(a);
-            }
+            RhinoApp.InvokeOnUiThread(dispose);
         }
         // copys xml files for EmbedScheme into the default rhino settings directory
         // if rhino is installed in a non-default way, and the settings directory is someplace else, this will break
@@ -85,14 +80,29 @@ namespace RhinoCaller3
 
             new Microsoft.VisualBasic.Devices.Computer().FileSystem.CopyDirectory(settings_source, settings_target, true);
         }
-        public static void write_to_cmd_line(String line)
-        {
-            RhinoApp.SendKeystrokes(line, true);
-        }
 
         public static String get_history()
         {
             return RhinoApp.CommandHistoryWindowText;
+        }
+        public static void run_command(String command)
+        {
+            Delegate run_command = new Action(() =>
+            {
+                RhinoApp.RunScript(command, true);
+            });
+            RhinoApp.InvokeOnUiThread(run_command);
+        }
+        public static String get_prompt()
+        {
+            String prompt = RhinoApp.CommandPrompt;
+            if (prompt != null)
+            {
+                return prompt;
+            } else
+            {
+                return "";
+            }
         }
     }
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>699</width>
-    <height>798</height>
+    <width>840</width>
+    <height>827</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,14 +26,49 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="1" colspan="3">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetDefaultConstraint</enum>
-      </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0">
       <item>
-       <widget class="QTextBrowser" name="retBox">
+       <layout class="QHBoxLayout" name="buttonLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QPushButton" name="boxButton">
+          <property name="text">
+           <string>Box</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="sphereButton">
+          <property name="text">
+           <string>Sphere</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addButton">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="subtractButton">
+          <property name="text">
+           <string>Subtract</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="rhinoLayout"/>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -55,11 +90,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="focusPolicy">
-         <enum>Qt::ClickFocus</enum>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="lineEdit"/>
       </item>
      </layout>
     </item>
@@ -70,7 +101,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>699</width>
+     <width>840</width>
      <height>21</height>
     </rect>
    </property>

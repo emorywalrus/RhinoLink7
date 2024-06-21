@@ -21,10 +21,14 @@ __declspec(dllexport) void destroy_rhino() {
 	Caller3::destroy_rhino();
 }
 
-__declspec(dllexport) void write_to_cmd_line(std::string line) {
-	Caller3::write_to_cmd_line(marshal_as<System::String^>(line));
-}
-
 __declspec(dllexport) std::string get_history() {
 	return marshal_as<std::string>(Caller3::get_history());
+}
+
+__declspec(dllexport) void run_command(std::string command) {
+	Caller3::run_command(marshal_as<System::String^>(command));
+}
+
+__declspec(dllexport) std::string get_prompt() {
+	return marshal_as<std::string>(Caller3::get_prompt());
 }
